@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+<table align="center">
+	<form method="POST">
+		<tr>
+			<td>Name: </td>
+			<td><input type="text" name="name" placeholder="name" required autocomplete="off" autofocus></td>
+		</tr>
+		<tr>
+			<td>Age: </td>
+			<td><input type="number" name="age" placeholder="age"></td>
+		</tr>
+		<tr>
+			<td>E-mail: </td>
+			<td><input type="email" name="email" placeholder="email" required readonly disabled></td>
+		</tr>
+		<tr>
+			<td>Password: </td>
+			<td><input type="password" name="password" placeholder="Password" required></td>
+		</tr>
+		<tr>
+			<td>Phone Number: </td>
+			<td><input type="text" name="phone number"></td>
+		</tr>
+		<tr>
+			<td>Gender: </td>
+			<td>Male<input type="radio" name="gender" value="male">
+			Female<input type="radio" name="gender" value="female">
+		    Others<input type="radio" name="gender" value="others"></td>
+		</tr>
+		<tr>
+			<td>DOB: </td>
+			<td><input type="date" name="DOB"></td>
+		</tr>
+		<tr>
+			<td>Address:</td>
+			<td><textarea rows="5" cols="22" name="address" placeholder="Address"></textarea></td>
+		</tr>
+		<tr>
+			<td>Languages Known: </td>
+			<td>C<input type="checkbox" name="C">
+			    C++<input type="checkbox" name="C++">
+			    Python<input type="checkbox" name="Python">
+			    Java<input type="checkbox" name="Java"></td>
+		</tr>
+		<tr>
+			<td>Village/Town/City: </td>
+			<td><select>
+						<option value="select">--select--</option>
+						<option value="rajahmundry">Rajahmundry</option>
+			            <option value="vizag">Vizag</option>
+			            <option value="kakinada">Kakinada</option>
+			            <option value="surampalem">Surampalem</option>
+			            <option value="tirupati">Tirupati</option></select></td>
+		</tr>
+		<tr>
+			<td>Certificates:</td>
+			<td><input type="file" name="Certificates"></td>
+		</tr>
+		<tr>
+			<td>Form Rating(1 to 5):</td>
+			<td><input type="range" name="Rating"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="submit"></td>
+			<td><input type="reset" name="reset"></td>
+		</tr>
+		<tr>
+			<td>Phone Number:</td>
+			<td><input type="tel" maxlength="10"></td>
+		</tr>
+		<tr>
+			<td>Color</td>
+			<td><input type="color" name="color"></td>
+		</tr>
+	</form>
+</table>
+</body>
+</html>
