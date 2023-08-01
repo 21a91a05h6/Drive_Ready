@@ -1,0 +1,22 @@
+#abc{
+	border: 2px dashed seagreen;
+}
+.xyz{
+	color: fuchsia;
+	border: 3px double forestgreen;
+	font-size: 20px;
+	background-color: lightcyan;
+	font-weight: bolder;
+	font-variant: small-caps;
+}
+h2,span{
+	font-size: 30px;
+	font-family: Verdana;
+	border: 2px outset darkmagenta;
+	font-style: oblique;
+	background-color: lavender;
+	font-variant: small-caps;
+}
+span{
+	border: 3px dashed mediumturquoise;
+}

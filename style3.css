@@ -1,0 +1,19 @@
+input[type]{
+	color: red;
+}
+input[type="text"]{
+	color: blue;
+}
+a[href]{
+	color: black;
+	background-color: yellow;
+}
+img[src]{
+	color: mediumaquamarine;
+	border: 2px dashed;
+	margin: 20px;
+	padding: 10px;
+	background-color: yellow;
+	width: 200px;
+	height: 200px;
+}

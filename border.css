@@ -1,0 +1,51 @@
+.a{
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	padding-top: 30px;
+}
+.div1{
+	width: 500px;
+	height: 150px;
+}
+#a{
+	float: left;
+	border: 3px dotted;
+}
+#b{
+	float: right;
+	border: 3px dashed;
+}
+#c{
+	float: left;
+	border: 3px solid;
+}
+#d{
+	float: right;
+	border: 3px double;
+}
+#e{
+	float: left;
+	border: 3px groove;
+}
+#f{
+	float: right;
+	border: 3px ridge;
+}
+#g{
+	float: left;
+	border: 3px inset;
+}
+#h{
+	float: right;
+	border: 3px outset;
+}
+#i{
+	float: left;
+	border: 3px none;
+}
+#j{
+	float: right;
+	border: 3px hidden;
+}
+

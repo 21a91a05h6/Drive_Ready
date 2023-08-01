@@ -1,0 +1,22 @@
+h1{
+	font-family: Algerian;
+	border: 3px inset rebeccapurple;
+	background-color: lavenderblush;
+}
+p{
+	font-family: Verdana;
+	border: 4px dotted darkcyan;
+	background-blend-mode: lighten;
+	background-color: silver;
+	text-align: center;
+	font-variant: small-caps;
+	margin: 200px;
+}
+#xyz{
+	color: palevioletred;
+	text-align: left;	
+	border: none;
+	background-color: white;
+	font-weight: bolder;
+	margin: 0px; 
+}

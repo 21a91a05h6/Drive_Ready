@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Border task</title>
+	<style type="text/css">
+		#b{
+			background-color: pink;
+			width: 300px;
+			height: 300px;
+			text-align: center;
+			outline: 5px dotted red;
+			margin: 20px;
+		}
+		#a{
+			outline: 3px dashed red;
+			background-color: mediumturquoise;
+			width: 300px;
+			height: 300px;
+			padding: 30px;
+			background-clip:border-box;
+			box-shadow: 0 0 0 3px blue;
+		}
+	</style>
+</head>
+<body>
+<div id="b">Borders</div>
+<div id="a" >Borders</div>
+</body>
+</html>

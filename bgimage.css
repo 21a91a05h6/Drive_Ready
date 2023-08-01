@@ -1,0 +1,16 @@
+body{
+	background-image: url(wallpapersden.com_k-beautiful-landscape-digital-art_3840x2160.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.div1{
+	background-image: url(cherry.png);
+	height: 400px;
+	width: 400px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.div1:hover{
+	width: 200px;
+	height: 200px;
+}

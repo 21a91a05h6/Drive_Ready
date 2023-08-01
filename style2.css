@@ -1,0 +1,15 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	background-color: powderblue;
+}
+div{
+	font-family: Algerian;
+	font-size: 20px;
+	font-style: italic;
+	height: 200px;
+	width: 200px;
+	background-color: bisque;
+	border: 2px inset royalblue;
+	margin-left: 300px;
+}
