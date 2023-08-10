@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Task 2</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-5.3.1-dist\css\bootstrap.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<style type="text/css">
+	.container-fluid{
+		border: 2px solid ;
+		width: 400px;
+		height: 304px;
+	}
+	.row{
+		height: 100px;
+		border-bottom: 2px solid;
+	}
+	.col-md{
+		background-color: skyblue;
+	}
+	#a{
+		text-align: center;
+	}
+	#b{
+		border: none;
+	}
+	#c{
+		background-color: yellow;
+		border-right: 2px solid;
+	}
+	#e{
+		background-color: lawngreen;
+	}
+	.sidebar{
+		float: right;
+	}
+	#d{
+		background-color: white;
+		border-right: 2px solid;
+	}
+	#f{
+		background-color: tomato;
+		border-left: 2px solid;
+	}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md" id="a">header</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6" id="c">main</div>
+		<!--<div class="col-md offset-md" id="d"></div>-->
+		<div class="col-md-3 offset-md-3" id="f">sidebar</div>
+	</div>
+	<div class="row" id="b">
+		<div class="col-md" id="e">footer</div>
+	</div>
+</div>
+</body>
+</html>

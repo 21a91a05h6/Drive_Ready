@@ -1,0 +1,41 @@
+.a{
+	float: left;
+}
+#pic{
+	width: 350px;
+	height: 400px;
+	padding-top: 50px;
+}
+span{
+	border: 1px solid black;
+	padding: 7px;
+	background-color: lightgray;
+}
+#email{
+	width: 450px;
+}
+.form-control{
+	border: none;
+}
+.text-muted{
+	font-style: oblique;
+	width: 380px;
+}
+.btn-default{
+	width: 440px;
+	text-align: left;
+}
+.btn-primary,.btn-info{
+	width: 490px;
+}
+form{
+	margin-top: 90px;
+}
+a{
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+}
+input{
+	padding: 5px;
+}

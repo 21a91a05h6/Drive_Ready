@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Task 3</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-5.3.1-dist\css\bootstrap.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<style type="text/css">
+	.container{
+		display: grid;
+		height: 100vh;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 0.2fr 1.0fr 0.5fr 0.5fr ;
+		grid-template-areas: 
+		"gallery gallery title title"
+		"gallery gallery buy_box buy_box"
+		"description description description description"
+		"related related related related";
+		grid-gap: 0.2rem;
+		margin: 0px 100px;
+	}
+	.title{
+		background-color: deeppink;
+		grid-area: title;
+	}
+	.gallery{
+		background-color: mediumturquoise;
+		grid-area: gallery;
+	}
+	.buy_box{
+		background-color: tomato;
+		grid-area: buy_box;
+	}
+	.description{
+		background-color: lawngreen;
+		grid-area: description;
+	}
+	.related{
+		background-color: lightsalmon;
+		grid-area: related;
+	}
+	@media only screen and (max-width: 990px){
+		.container{
+			grid-template-columns: 1fr;
+			grid-template-rows: 0.2fr 1fr 0.5fr 1fr 0.5fr;
+			grid-template-areas: 
+			"title" 
+			"gallery"
+			"buy_box"
+			"description"
+			"related";
+		}
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="title">Title</div>
+	<div class="gallery">Gallery</div>
+	<div class="buy_box">Buy Box</div>
+	<div class="description">Description</div>
+	<div class="related">Related</div>
+</div>
+</body>
+</html>

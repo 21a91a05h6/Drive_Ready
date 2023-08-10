@@ -1,0 +1,23 @@
+.card{
+	width: 280px;
+	border: 2px solid lightgray;
+	padding:0px 10px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px 2px lightgray;
+}
+.glyphicon{
+	padding-top: 25px;
+	padding-left: 20px;
+	font-size: 50px;
+}
+.card-text{
+	text-align: right;
+}
+.row{
+	margin-bottom: 20px;
+}
+i{
+	padding-top: 25px;
+	padding-left: 20px;
+	font-size: 50px;
+}
