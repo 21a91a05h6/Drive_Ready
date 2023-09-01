@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Regular Expression</title>
+</head>
+<body>
+	<h1>Regular Expression</h1>
+	<input type="text" name="" id="inp_id">
+	<button onclick="check_numornot()">check number validity</button><br>
+	<span id="msg_id"></span><br>
+	<input type="text" name="" id="in_id">
+	<button onclick="check_charornot()">check characters validity</button><br>
+	<span id="s_id"></span>
+<script type="text/javascript">
+	function check_numornot(){
+		re=/^[8][0-9]{9}$/;//number must start with number 8 and after 9 numbers must be there.
+		let n=document.getElementById('inp_id').value;
+		output=re.test(n);
+		if(output==true){
+			var s=document.getElementById("msg_id");
+			s.innerText="Correct Format";
+			s.style.color="green";
+		}
+		else{
+			var s=document.getElementById("msg_id");
+			s.innerText="Please enter correct format";
+			s.style.color="red";
+		}
+	}
+	function check_charornot(){
+		//re1=/^[a-z]+$/;//if we give capital letter or number then +$ stops and prints false.
+		//re1=/^[A-Z]+$/;//capital letter
+		//re1=/^[a-zA-Z]+$/;//small and capital letters
+		//re1=/^[a-zA-Z0-9]+$/;//alpha numeric characters means both letters and numbers.
+		re1=/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;//gmail verification
+		let ip=document.getElementById('in_id').value;
+		res=re1.test(ip);
+		if(res==true){
+			var sp=document.getElementById("s_id");
+			sp.innerText="Correct Format";
+			sp.style.color="green";
+		}
+		else{
+			var sp=document.getElementById("s_id");
+			sp.innerText="Please enter correct format";
+			sp.style.color="red";
+		}
+	}
+</script>
+</body>
+</html>

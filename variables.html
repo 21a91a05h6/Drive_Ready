@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Types of Variables</title>
+</head>
+<body>
+<h1>Declaring the variables</h1>
+<script type="text/javascript">
+	var a=10;
+	document.write(a+"<br>");
+	let b=30;
+	//let b=40;//wrong//redeclaration is not possible;
+	b=50;//correct//reinitialization is possible;
+	document.write(b+"<br>");
+	if(b==50){
+		let c=40;
+		document.write(c+"<br>");//prints 40 as let can be utilised within the if.
+	}
+	//document.write(c);//gives error as the let variable is block scoped so can be used within in the if block only but not outside it.
+	const pi=3.14;
+	//pi=4.23;
+	document.write(pi);//error comes as const is given so that the value of a variable can't be changed and declared and initialized only once.
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>String Methods</title>
+</head>
+<body>
+<script type="text/javascript">
+	var a="Full Stack Development";
+	document.write(a.substr(0,4)+"<br>");
+	document.write(a.substring(1,3)+"<br>");
+	document.write(a.replace('l','e')+"<br>")
+	document.write(a.search('a')+"<br>")
+	document.write(a.toLocaleLowerCase()+"<br>");
+	document.write(a.toLocaleUpperCase()+"<br>");
+	document.write(a.indexOf('l')+"<br>");
+	document.write(a.includes('e')+"<br>");
+	document.write(a.slice(0,-1)+"<br>");
+	var b=" afternoon         batch           "
+	document.write(a.concat(b)+"<br>");
+	document.write(a.lastIndexOf('l')+"<br>");
+	document.write(a.charCodeAt(7)+"<br>");
+	document.write(b.trim()+"<br>");
+	document.write(a.charAt(0)+"<br>");
+	document.write(a.valueOf().slice(0,-2)+"<br>");
+	document.write(a.split("")+"<br>");
+	var c=123;
+	document.write(c.toString().slice(1)+"<br>")
+	var d='egg';
+	var e='hen';
+	document.write(d.match(e)+"<br>");
+	var f='egg';
+	document.write(d.match(f)+"<br>")
+</script>
+</body>
+</html>

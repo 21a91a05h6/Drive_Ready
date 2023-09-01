@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Key Value Pairs</title>
+</head>
+<body>
+<script type="text/javascript">
+	var fruit=[{
+		name:'apple'
+	},
+	{
+		name:'banana'
+	},
+	{
+		name:'strawberry'
+	},
+	{
+		name:'cherry'
+	}]
+	fruit.forEach(i=>{
+		for(let k in i){
+		document.write(i[k]+"<br>");
+	}
+});
+</script>
+</body>
+</html>

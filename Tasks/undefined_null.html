@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Undefined or null</title>
+</head>
+<body>
+<script type="text/javascript">
+var a;
+function check(val) {
+    if(val == null) {
+        document.write('The variable is undefined or null'+"<br>");
+    }
+    else {
+       document.write('The variable is not undefined or null'+"<br>");
+    }
+}
+check(5);
+check('hello');
+check(null);
+check(a);
+</script>
+</body>
+</html>

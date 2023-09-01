@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array Methods</title>
+</head>
+<body>
+<script type="text/javascript">
+	const arr=[{
+		name:'john',
+		age:18
+	}]
+	arr.map(function(val,i){
+		document.write("name: "+val.name+"<br>");
+		document.write("age: "+val.age+"<br>");
+	}
+	)
+	const a=[1,2,3,4,5,6];
+	let e_num=a.filter(function(v,i){
+		return a[i]%2==0 && a[i]%3==0;
+	})
+	document.write(e_num+"<br>");
+	const b=[3,7,8,1,2];
+	document.write(b.sort()+"<br>");
+	a.forEach(i=>
+		document.write(a[i-1]));
+	document.write("<br>")
+	document.write(a.concat(b)+"<br>");
+	let r=a.every(function(val){
+		return val>0;
+	})
+	document.write(r+"<br>");
+	let s=a.some(function(val){
+		return val==6;
+	})
+	document.write(s+"<br>");
+	document.write(a.includes(0)+"<br>");
+	const veg=["tomato","onion","carrot"];
+	document.write(veg.join(" and ")+"<br>");
+	let m=a.reduce(function(acc,val){
+		return acc+val;
+	},2)
+	document.write(m+"<br>");
+	const num=['one','two','three','four'];
+	let l=num.find(function(val,i,arr){
+		return val.endsWith('o');
+	})
+	document.write(l+"<br>");
+	let g=num.findIndex(function(val,i,arr){
+		return val.startsWith('f');
+	});
+	document.write(g+"<br>")
+	document.write(a.indexOf(3)+"<br>");
+	//fill
+	document.write(veg.fill('radish')+"<br>");
+	document.write(a.slice(0,-1)+"<br>")
+	document.write(a.reverse()+"<br>");
+	const o=[2,6,3,4,9];
+	document.write(o+"<br>");
+	o.push(0);
+	document.write(o+"<br>");
+	o.pop();
+	document.write(o+"<br>");
+	o.shift();
+	document.write(o+"<br>")
+	o.unshift(1,8);
+	document.write(o+"<br>");
+</script>
+</body>
+</html>

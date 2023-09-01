@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Divs Task</title>
+	<style type="text/css">
+		.div{
+			width: 600px;
+			height: 300px;
+		}
+		.div1{
+			width:200px ;
+			height: 300px;
+			float: left;
+		}
+		.div2{
+			width: 100px;
+			height: 300px;
+			float: left;
+			position: absolute;
+			left: 270px;
+			top: 45%;
+		}
+		.div3{
+			width: 200px;
+			height: 300px;
+			float: right;
+		}
+		img{
+			height: 200px;
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+<div class="div">
+<div class="div1">
+	<img src="1.jpeg" class="img" alt="1">
+	<img src="2.jpeg" class="img" alt="2">
+	<img src="3.jpeg" class="img" alt="3">
+	<img id="i7">
+</div>
+<div class="div2">
+	<button onclick="swapRight()">-></button>
+	<button onclick="swapLeft()"><-</button>
+</div>
+<div class="div3">
+	<img src="4.jpeg" alt="4" class="img1" id="i4">
+	<img src="5.jpeg" alt="5" class="img1">
+	<img id="i6">
+</div>
+</div>
+<script type="text/javascript">
+	var b=document.getElementById('i6');
+	var a=document.getElementsByClassName('img');
+	let image=['','1.jpeg','2.jpeg','3.jpeg'];
+	function swapRight(){
+		let random=Math.floor(randomNumber(1,4));
+		b.src=image[random];
+		for(i=0;i<a.length;i++){
+			if(a[i].alt==random){
+				a[i].src='';
+			}
+		}
+	}
+	var d=document.getElementById('i7');
+	var c=document.getElementsByClassName('img1');	
+	let images=['','','','','4.jpeg','5.jpeg'];
+	function swapLeft(){
+		let ran=Math.floor(randomNumber(4,6));
+		d.src=images[ran];
+		for(j=0;j<c.length;j++){
+			if(c[j].alt==ran){
+				c[j].src='';
+			}
+		}
+	}
+	function randomNumber(min, max) {
+   		 return Math.random() * (max - min) + min;
+	}
+</script>
+</body>
+</html>

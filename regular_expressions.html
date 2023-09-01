@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Regular Expressions</title>
+</head>
+<body>
+	<h1>Regular Expressions</h1>
+	<p>regular expression is given in forward slashes /re/.</p>
+	<p>Regular expression is case sensitive.</p>
+<script type="text/javascript">
+	let str='game' ;
+	let re=/batch/;
+	let output=re.test("fullstack batch");
+	//let output=re.test("fullstack BATCH");//if the bath word is given in upper case then we get false as the regular expression is case sensitive.
+	console.log(output);
+	if(output==true){//this is how the emails and their passwords are checked.
+		console.log("Valid");
+	}
+	else{
+		console.log("Invalid");
+	}
+	//the above tests whether the given re is there in the sentence given in the test(""),it gives true as 'batch' is present in the sentence.Else if the word is not present then false will come.
+	let re1=/batch/i;//the i makes any word in the test as lowercase only.thus removing the case sensitivity.
+	let output1=re1.test("fullstack BATCH");//gives true
+	console.log(output1);
+
+	re2=/^b/;//checks whether the word starts with b or not.
+	output2=re2.test("batch");//true
+	output3=re2.test("tbatch");//false
+	console.log(output2);
+	console.log(output3);
+
+	re3=/batch/g;//g for multiple indexes.
+	res=re3.exec('full stack batch course batch');
+	console.log(res);
+	console.log(res.index);//gives index of 1st word 'batch'.
+	res=re3.exec('full stack batch course batch');
+	console.log(res.index);//gives index of 2nd word 'batch'.
+
+	//phone number validations
+	re4=/^[0-9]{10}$/;//[0-9] means from 0 to 9 then {10} means phone number must have only 10 numbers in it and $ means if phone number exceeds 10 numbers then it stops and prints false.
+	res1=re4.test("9100821355");
+	console.log(res1);
+	res1=re4.test("132456789");//false cause the number of numbers in phone no is 8.
+	console.log(res1);
+	res1=re4.test("12345678901");//false cause the no. of numbers in phone no is 11.
+	console.log(res1);
+	re5=/^[9][0-9]{9}$/;//[9] means the starting number needs to be 9, {9} means that after the first number 9 there needs to 9 numbers only thus making it 10 all the most.
+	res2=re5.test("9885070393");
+	console.log(res2);
+	res2=re5.test("198765432");
+	console.log(res2);
+</script>
+</body>
+</html>

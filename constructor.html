@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Constructor</title>
+</head>
+<body>
+	<h1>Constructor</h1>
+<script type="text/javascript">
+	class Student{
+		constructor(rno,fname,lname,clg){//must use 'constructor' keyword.
+			this.rollno=rno;
+			this.fn=fname;
+			this.ln=lname;
+			this.college=clg;
+		}
+	}
+	let obj=new Student(123,'Tej','Burre','AEC');
+	let obj2=new Student(456,'Tejuuuu','Barre','AEC');
+	console.log(obj.rollno,obj.fn,obj.ln,obj.college);
+	console.log(obj2.rollno,obj2.fn,obj2.ln,obj2.college);
+	//document.write(obj.rollno,obj.fn,obj.ln,obj.college);
+	class Car{
+		constructor(model,name){
+			this.mno=model;
+			this.n=name;
+		}
+	}
+	let c1=new Car(234,'Vivo');
+	let c2=new Car(456,'Audi');
+	console.log(c1.mno,c1.n);
+	console.log(c2.mno,c2.n);
+	class trainer{
+		constructor(finame,laname){
+			this.firstname=finame;
+			this.lastname=laname;
+			this.getfullname=function(){
+				return this.firstname+" "+this.lastname;
+			}
+		}
+	}
+	let t1=new trainer('Tej','Burre');
+	console.log(t1.getfullname());
+	document.write(t1.getfullname());
+</script>
+</body>
+</html>

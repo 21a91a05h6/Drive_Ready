@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Click Event Task</title>
+</head>
+<body>
+<button id="b1">Show</button>
+<button id="b2">Hide</button>
+<p id="p1"></p>
+<script type="text/javascript">
+	let c=document.getElementById("b1");
+	c.onclick=show;
+	let a=document.getElementById("p1");
+	function show(){
+		a.innerHTML="Show";
+		a.style.display='block';
+	}
+	let b=document.getElementById('b2');
+	b.onclick=hide;
+	function hide(){
+		a.innerHTML="Hide"
+		a.style.display='none';
+	}
+</script>
+</body>
+</html>

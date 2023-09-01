@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Onchange Event</title>
+</head>
+<body>
+<center>
+	<form id="myForm" onsubmit="return validateForm()">
+		First Name:<input type="text"name="fname" id="fname_id" autofocus><br>
+		Last Name:<input type="text" name="lname" id="lname_id"><br><br>
+	<select style="width:300px;height: 30px;" onchange="change(this.value)" id="clg_id" name="college"><!-- this.val=current selected value,or any given value at that moment-->
+		<option>-- Select College --</option>
+		<option value="AEC">AEC</option>
+		<option value="ACET">AECT</option>
+		<option value="ACOE">ACOE</option>
+	</select>
+	<p id="p1"></p>
+	Address:<textarea rows="5" cols="10" id="add" name="address"></textarea><br>
+	<label id="c1">Languages:
+	English:<input type="checkbox" name="english">
+	French:<input type="checkbox" name="french">
+	Spanish:<input type="checkbox" name="spanish"><br><br>
+	<label id="r1">Gender:
+	Male:<input type="radio" name="gender" value="male">
+	Female:<input type="radio" name="gender" value="female"></label><br><br>
+	<button onclick="send()">Submit Form</button>
+	<button onclick="reset()">Reset Form</button>
+	</form>
+</center>
+<script type="text/javascript">
+	console.log("5"*3);//output=15 apart from '+' others like *,-,/,% then it performs it's operations.//typeof(null)-object
+	console.log("5"+2+3);//o/p-523 cause starting with a string
+	console.log(2+3+"6");//o/p:56 cause end with string and does concatenation
+	function change(val){
+		document.getElementById('p1').innerText=val;
+	}
+	function send(){
+		var form=document.getElementById('myForm');
+		form.submit();
+	}
+	function reset(){
+		document.getElementById('myForm').reset();
+	}
+	function validateForm(){
+		let fname=document.getElementById('fname_id').value;
+		let lname=document.getElementById('lname_id').value;
+		let clg=document.getElementById('clg_id').value;
+		let gen=document.getElementById('r1').value;
+		let addr=document.getElementById('add').value;
+		let check=document.getElementById('c1').value;
+		if(fname==''){
+			alert("Please enter first name");
+			return false;
+		}
+		else if(lname==''){
+			alert("Please enter last name");
+			return false;
+		}
+		else if(clg==''){
+			alert("Please select college");
+			return false;
+		}
+		else if(addr==''){
+			alert('Please enter address');
+			return false;
+		}
+		else if(check==''){
+			alert('Please check a language');
+			return false;
+		}
+		else if (gen==''){
+			alert("Please select a gender");
+			return false;
+		}
+	}
+</script>
+</body>
+</html>

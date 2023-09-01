@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Random</title>
+</head>
+<body>
+1<input type="radio" name="num" value="1">
+2<input type="radio" name="num" value="2">
+3<input type="radio" name="num" value="3">
+4<input type="radio" name="num" value="4"><br><br>
+<button onclick="ran()">Play Now</button><br><br>
+<input type="text" id="out"><br><br>
+<p id="line"></p>
+<script type="text/javascript">
+	function ran(){
+		var a=document.getElementById('out');
+		a.value=Math.floor(Math.random() * 5);
+		var b=document.getElementsByName('num');
+		for(var i=0;i<b.length;i++){
+			//console.log(b[i].value);
+			if(b[i].checked==true){
+				var c=b[i].value;
+			}
+		}
+		if(a.value==c){
+			document.getElementById('line').innerText='You Won';
+		}
+		else{
+			document.getElementById('line').innerText='You Lost';
+		}
+	}
+
+</script>
+</body>
+</html>

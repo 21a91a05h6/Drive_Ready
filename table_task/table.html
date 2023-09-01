@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Table</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-5.3.1-dist\css\bootstrap.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row mt-3">
+			<div class="col-md-10">
+				<p class="h2">Product <b>Details</b></p>
+			</div>
+			<div class="col-md-2">
+				<button class="bg-info btn text-white" onclick="newRow()"><b>+ Add New</b></button>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div>
+				<table class="table table-bordered" id="myTable">
+					<thead>
+						<tr>
+							<th>Product id</th>
+							<th>Name</th>
+							<th>Price</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody id="tableBody">
+						<tr>
+							<td class="editable">456789</td>
+							<td class="editable">Realme mobile</td>
+							<td class="editable">16000</td>
+							<td>
+								<span onclick="editRow()"><i class="fas fa-pencil-alt text-warning"></i></span>
+								<span onclick="del()"><i class="fas fa-trash text-danger"></i></span>
+							</td>
+						</tr>
+						<tr>
+							<td class="editable">123456</td>
+							<td class="editable">MI mobile</td>
+							<td class="editable">18000</td>
+							<td>
+								<span onclick="editRow()"><i class="fas fa-pencil-alt text-warning"></i></span>
+								<span onclick="del()"><i class="fas fa-trash text-danger"></i></span>
+							</td>
+						</tr>
+						<tr>
+							<td class="editable">365648</td>
+							<td class="editable">Vivo mobile</td>
+							<td class="editable">20000</td>
+							<td>
+								<span onclick="editRow()"><i class="fas fa-pencil-alt text-warning"></i></span>
+								<span onclick="del()"><i class="fas fa-trash text-danger"></i></span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+function newRow(){
+	var b=document.getElementById('tableBody');
+	var rows=tableBody.rows.length;  
+    var r=tableBody.insertRow(rows);  
+    var i1=r.insertCell(0);  
+    var i2=r.insertCell(1);  
+    var i3=r.insertCell(2); 
+    var i4=r.insertCell(3);
+    var id=document.createElement("input");  
+    id.setAttribute("class","editable");
+    var name=document.createElement("input"); 
+    name.setAttribute("class","editable") ;
+    var price=document.createElement("input"); 
+    price.setAttribute("class","editable") ;
+    var editIcon=document.createElement("i");
+    editIcon.setAttribute("class", "fas fa-pencil-alt text-warning");
+    editIcon.addEventListener("click",editRow)
+    var deleteIcon=document.createElement("i");
+    deleteIcon.setAttribute("class", "fas fa-trash text-danger");
+    deleteIcon.addEventListener("click",del);
+    id.type="text";  
+    name.type="text";  
+    price.type="text";  
+    i1.append(id);  
+    i2.append(name);  
+    i3.append(price);  
+    i4.append(editIcon,deleteIcon);
+    let tr=document.createElement('tr');
+    tr.append(i1,i2,i3,i4);
+    var b=document.getElementById('tableBody').append(tr);
+}
+function editRow() {
+ var erow = event.target.closest('tr');
+    var cells = erow.querySelectorAll('.editable');
+    
+    cells.forEach(cell => {
+      var text = cell.textContent;
+      cell.innerHTML = `<input type="text" value="${text}" class="editable">`;
+    });
+    
+    event.target.style.display = 'inline';
+}
+ function del()  
+    {  
+        var deleted=confirm("Do you want to delete the record?")
+        if (deleted) {
+      		const move = event.target.closest('tr');
+      		move.remove();
+    	}
+    }  
+</script>
+</body>
+</html>

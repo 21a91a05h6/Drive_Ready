@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM Query Selector</title>
+</head>
+<body>
+<h1 id="i1">Query Selector Method</h1>
+<h2>Query Selector All</h2>
+<p class="course">HTML</p>
+<p class="course">HTML</p>
+<p class="course">HTML</p>
+<script type="text/javascript">
+	let p1=document.querySelectorAll(".course,#i1,h2");
+	console.log(p1);
+	for(i=0;i<p1.length;i++){
+		p1[i].style.color="red";
+	}
+	let p2=document.querySelector(".course");
+	p2.style.color="green";
+</script>
+</body>
+</html>

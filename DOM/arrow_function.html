@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arrow Functions</title>
+</head>
+<body>
+	<script type="text/javascript">
+		c=(a,b) =>document.write(a*b+"<br>");
+		c(2,3)
+		getid= roll=>document.write(roll+"<br>");
+		getid(16);
+		test=()=>document.write("Hi");//here in place of () we can also use _ as there are no parameters to pass.
+		test();
+		setTimeout(
+			function () {
+				document.write("executed after 2 seconds"+"<br>");
+			},2000)
+		setTimeout(test,2000);
+		function test(){
+			document.write("Hi");
+		}
+	</script>
+</body>
+</html>

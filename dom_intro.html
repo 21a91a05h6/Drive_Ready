@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM Intro</title>
+</head>
+<body>
+	<h1 id="a">DOM INTRO</h1>
+	<h2 id="c">Document Object Model</h2>
+<script type="text/javascript">
+	//get element h1
+	console.log(document);//This is how the browser reads our html file.
+	b=document.getElementById('a').style.color='red';
+	b=document.getElementById('a').style.fontSize='50px';
+	//changes the value of the text of h1 element means h1 to p
+	b.innerHTML='<p>DOM Properties</p>';
+	//get element h1
+	d=document.getElementById('c');
+	//just prints the text but won't change h1 to p 
+	d.innerText='<p>DOM</p>';
+</script>
+</body>
+</html>

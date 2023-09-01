@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Even and Odd Sum</title>
+</head>
+<body>
+<script type="text/javascript">
+	var esum=0;
+	var osum=0
+	var a=[1,2,3,4,5,6];
+	for(i=0;i<a.length;i++){
+		if(a[i]%2==0){
+			esum=a[i]+esum;
+		}
+		else{
+			osum=a[i]+osum;
+		}
+	}
+	document.write(esum+"<br>");
+	document.write(osum);
+</script>
+</body>
+</html>

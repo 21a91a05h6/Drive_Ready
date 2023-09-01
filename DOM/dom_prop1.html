@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM Properties 1</title>
+</head>
+<body>
+	<h1>By Class</h1>
+	<p class="course">HTML</p>
+	<p class="course">CSS</p>
+	<p class="course">JS</p>
+	<ul>
+		<li>AEC</li>
+		<li>ACET</li>
+		<li>ACOE</li>
+	</ul>
+<script type="text/javascript">
+	// let paras=document.getElementsByClassName('course');
+	// console.log(paras); gives indices of the paragraphs with same class name
+	// paras[0].innerText="Hyper Text Markup Language";//only the first paragraph content will be changed as it's index is 0
+	let paras1=document.getElementsByTagName('p');
+	paras1[2].style.color="red";
+	let lis=document.getElementsByTagName('li');
+	lis[0].style.color="red";
+	lis[2].style.fontSize="50px";
+	lis[0].innerText="Aditya Engineering College";
+</script>
+</body>
+</html>

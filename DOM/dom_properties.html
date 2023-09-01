@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM Properties</title>
+</head>
+<body>
+	<img src="b.jpeg" alt="banana" id="a"><br>
+	<input type="text" id="ins_id" value="sri"><br><br>
+	<input type="text" id="i_2">
+	<p id="p1">Please enter name</p>
+<script type="text/javascript">
+	let b=document.getElementById("a");
+	b.src="banana.jpeg";
+	b.style.height="100px";
+	b.style.width="100px";
+	let ins=document.getElementById("ins_id");
+	ins.value="divya";
+	let inp=document.getElementById("i_2");
+	inp.style.border="2px solid red";
+	let p=document.getElementById('p1');
+	p.style.color="red";
+	p.innerText="Please";
+</script>
+</body>
+</html>

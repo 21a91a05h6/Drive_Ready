@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Functions</title>
+</head>
+<body>
+	<h1>Functions</h1>
+<script type="text/javascript">
+	function test(){
+		document.write("test"+"<br>");
+	}
+	test();
+	function getname(a){
+		document.write(a+"<br>");
+	}
+	getname('abc');
+	var id=prompt("Enter a number");
+	function call(id){
+		document.write(id+"<br>");
+	}
+	call(id);
+	var c=sum(1,2);//if given 1 or no argument(s) in this then we get NaN
+	function sum(x,y){
+		document.write(x+y);
+	}
+</script>
+</body>
+</html>

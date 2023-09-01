@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add, Edit, and Delete Rows</title>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .edit-icon, .delete-icon {
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody id="table-body">
+    <!-- Rows will be added here -->
+  </tbody>
+</table>
+<button onclick="addNewRow()">Add New</button>
+
+<script>
+function addNewRow() {
+  const tableBody = document.getElementById('table-body');
+  
+  const newRow = document.createElement('tr');
+  newRow.innerHTML = `
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    <td>
+      <span class="edit-icon" onclick="editRow(this)">Edit</span>
+      <span class="delete-icon" onclick="deleteRow(this)">Delete</span>
+    </td>
+  `;
+  
+  tableBody.appendChild(newRow);
+}
+
+function editRow(editIcon) {
+  const row = editIcon.parentNode.parentNode;
+  const cells = row.querySelectorAll('td:not(:last-child)');
+  
+  cells.forEach(cell => {
+    const text = cell.textContent;
+    cell.innerHTML = `<input type="text" value="${text}">`;
+  });
+  
+  const editCell = row.querySelector('.edit-icon');
+  editCell.style.display = 'none';
+}
+
+function deleteRow(deleteIcon) {
+  const confirmation = confirm('Are you sure you want to delete this row?');
+  
+  if (confirmation) {
+    const row = deleteIcon.parentNode.parentNode;
+    row.remove();
+  }
+}
+</script>
+</body>
+</html>

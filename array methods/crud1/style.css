@@ -1,0 +1,23 @@
+i
+{
+    cursor: pointer;
+}
+button{
+    background-color: transparent;
+    outline: none;
+    border: none; 
+}
+.btn
+{
+    width: 120px;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: skyblue;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: skyblue;
+}

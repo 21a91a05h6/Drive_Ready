@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spread Operator</title>
+</head>
+<body>
+	<h1>Spread Operator</h1>
+	<p>notation '...' just prints the array elements individually.It takes an iteration and expands or seperate each element.</p>
+<script type="text/javascript">
+	//-------------1st way------------//
+	let arr=[1,2,3,4];
+	console.log(arr);
+	console.log(...arr);
+	//--------------2nd way------------//
+	//let arr1=[4,5,arr];
+	let arr1=[4,5,...arr];//use spread to print elements individually and not in an array format.
+	console.log(arr1);
+	console.log(...arr1);
+	//---------------3rd way-----------//
+	let arr3=[9,8,7,6];
+	let arr4=[5,4,3,2];
+	//let arr5[arr3,arr4];
+	//let arr5[...arr3,...arr4];//prints the two arrays combined and each element is printed individually.
+	let arr5=[...arr3,1,0,...arr4,11,12];//prints elements in between the array.
+	console.log(arr5);
+	//----------------4th way-----------//
+	let str="drive ready";
+	console.log(str);
+	console.log(...str);//gives gap between the letters of the string.
+	//----------------5th way-----------//
+	function sum(a,b,c,d){
+		console.log(a+b+c+d);
+	}
+	let arr6=[3,4,5,6]
+	sum(arr6[0],arr6[1],arr6[2],arr6[3]);
+	sum(...arr6);//takes elements of the array individually and adds them.
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Slider Image Task</title>
+</head>
+<body align="center"> 
+<button onclick="incrbyone()">Next</button>
+<button onclick="decrbyone()">Previous</button>
+<p id="p1">
+	<img src="1.jpeg" style="width:200px;height: 200px;">
+</p>
+<script type="text/javascript">
+	window.onload=incrbyone;
+	var i=0;
+	function incrbyone(){
+		if(i<5){
+			var res=++i;
+			document.getElementById('p1').innerHTML="<img src='"+res+".jpeg' style='width:200px;height:200px;'/>";//pre increment prints upto 6 then comes out in post increment prints till 5 and comes out.
+		}
+		else{
+			// var res=--i;
+			// document.getElementById('p1').innerHTML="<img src='"+res+".jpeg' style='width:200px;height:200px;'/>";
+			i=0;
+
+		}
+		setTimeout(incrbyone,1000);
+	}
+	function decrbyone(){
+		if(i>1){
+			var res=--i;
+			document.getElementById('p1').innerHTML="<img src='"+res+".jpeg' style='width:200px;height:200px;'/>";
+		}
+	}
+</script>
+</body>
+</html>

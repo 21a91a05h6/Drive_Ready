@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Type of | alerts</title>
+</head>
+<body>
+<script type="text/javascript">
+	var a=10;
+	document.write(typeof(a)+"<br>");
+	var b='hello';
+	document.write(typeof(b)+"<br>");
+	var c=11.2;
+	document.write(typeof(c)+"<br>");
+	var s=19;
+	console.log(s);
+	console.log(typeof(s));
+	/*b="hi";
+	alert(b);
+	n='hello';
+	window.alert(n);*/
+	var d=true;
+	document.write(typeof(d)+"<br>");
+	var arr=[13,'hi',11];
+	document.write(arr+"<br>");
+	console.log(arr);
+	document.write(arr[1]+"<br>");
+	document.write(typeof(arr)+"<br>");
+	var fruit={
+		'name':'apple'
+	}
+	console.log(fruit.name);
+	console.log(fruit['name']);
+	var f={
+		'name':'Tej',
+		'rollno':'B3',
+		 'clg':'aec',
+		 'branch':'cse'
+	}
+	for(let k in f){
+		document.write(f[k]+"<br>");
+	}
+	console.log(f.name);
+	console.log(f.rollno);
+	console.log(f.clg);
+	console.log(f.branch);
+	var g=[{
+		'name':'Theju',
+		'rollno':'B3',
+		 'clg':'aec',
+		 'branch':'cse'
+	},
+	{
+		'name':'Divya',
+		'rollno':'H6',
+		 'clg':'aec',
+		 'branch':'cse'
+	},
+	{
+		'name':'Maggie',
+		'rollno':'D5',
+		 'clg':'aec',
+		 'branch':'cse'
+	},
+	{
+		'name':'Deepthi',
+		'rollno':'E2',
+		 'clg':'aec',
+		 'branch':'cse'
+	},
+	{
+		'name':'MNP',
+		'rollno':'G2',
+		 'clg':'aec',
+		 'branch':'cse'
+	}
+	]
+	document.write(g[0].name+"<br>");
+	g.forEach(i=>{
+		for(let key in i){
+			document.write(key+" : "+ i[key]+"<br>")
+		}
+	})
+	for(let i=0;i<g.length;i++){
+		document.write((i+1)+". "+g[i].name+"<br>");
+	}
+	for(var i=0;i<g.length;i++){
+		document.write((i+1)+". ");
+		for(key in g[i]){
+			document.write(g[i][key]+" ");
+		}
+		document.write("<br>")
+	}
+</script>
+</body>
+</html>

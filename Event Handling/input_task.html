@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Input Tag Task</title>
+</head>
+<body>
+Enter Name: <input type="text" name="" onkeyup="sample(this.value)" id="ins_id"><br><br><!--autofocus:moves cursor directly to input field upon entering into the window-->
+<span id="sp_id"></span>
+<script type="text/javascript">
+	var a=document.getElementById('ins_id');
+	var b=document.getElementById('sp_id');
+	function sample(str){
+		if(str==''){
+			//alert('Enter Name');
+			b.innerText="Please enter name";
+			b.style.color="red";
+			a.style.outline="2px solid red";
+		}
+		else if(str.length<4){
+			b.innerText="Please enter more than 3 characters";
+			b.style.color="red";
+			a.style.outline="2px solid red";
+		}
+		else{
+			b.innerText=" ";
+			a.style.outline="none";
+		}
+	}
+</script>
+</body>
+</html>
