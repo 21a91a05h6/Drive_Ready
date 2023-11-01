@@ -1,0 +1,6 @@
+mongodb+srv://root:<password>@cluster0.zmaifqq.mongodb.net/
+
+change <password> with root
+
+username:root
+password:root

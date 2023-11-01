@@ -1,0 +1,361 @@
+db.students.insertMany({Name:"MMM", Phone:"87654", Rollno:"12347",marks:"85"},{Name:"NNN", Phone:"56789", Rollno:"12348", marks:"80"},{Name:"OOO", Phone:"67890", Rollno:"12349", marks:"75"})
+Please enter a MongoDB connection string (Default: mongodb://localhost/): mongosh
+mongosh
+Current Mongosh Log ID: 65129669dbf63b963123b6b6
+Connecting to:          mongodb://127.0.0.1:27017/mongosh?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.6
+Using MongoDB:          7.0.0
+Using Mongosh:          1.10.6
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+------
+   The server generated these startup warnings when booting
+   2023-09-14T19:55:44.366+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+mongosh> show dbs
+admin   40.00 KiB
+config  72.00 KiB
+local   72.00 KiB
+mongosh> use DriveReady
+switched to db DriveReady
+DriveReady> show dbs
+admin   40.00 KiB
+config  72.00 KiB
+local   72.00 KiB
+DriveReady> db.createCollection("students")
+{ ok: 1 }
+DriveReady> show dbs
+DriveReady   8.00 KiB
+admin       40.00 KiB
+config      72.00 KiB
+local       72.00 KiB
+DriveReady> db
+DriveReady
+DriveReady> show collections
+students
+DriveReady> db.students.insertOne({Name:"SSS", Phone:"12344", Rollno:"12345", marks:"90"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("651298e1dbf63b963123b6b7")
+}
+DriveReady> db.students.find
+[Function: find] AsyncFunction {
+  returnsPromise: true,
+  apiVersions: [ 1, Infinity ],
+  returnType: 'Cursor',
+  serverVersions: [ '0.0.0', '999.999.999' ],
+  topologies: [ 'ReplSet', 'Sharded', 'LoadBalanced', 'Standalone' ],
+  deprecated: false,
+  platforms: [ 'Compass', 'Browser', 'CLI' ],
+  isDirectShellCommand: false,
+  acceptsRawInput: false,
+  shellCommandCompleter: undefined,
+  help: [Function (anonymous)] Help
+}
+DriveReady> db.students.find()
+[
+  {
+    _id: ObjectId("651298e1dbf63b963123b6b7"),
+    Name: 'SSS',
+    Phone: '12344',
+    Rollno: '12345',
+    marks: '90'
+  }
+]
+DriveReady> db.students.insertOne({Name:"PPP", Phone:"98765", Rollno:"12346", marks:"90"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("6512996adbf63b963123b6b8")
+}
+DriveReady> db.students.find()
+[
+  {
+    _id: ObjectId("651298e1dbf63b963123b6b7"),
+    Name: 'SSS',
+    Phone: '12344',
+    Rollno: '12345',
+    marks: '90'
+  },
+  {
+    _id: ObjectId("6512996adbf63b963123b6b8"),
+    Name: 'PPP',
+    Phone: '98765',
+    Rollno: '12346',
+    marks: '90'
+  }
+]
+DriveReady> db.students.insertMany({Name:"MMM", Phone:"87654", Rollno:"12347",marks:"85"},{Name:"NNN", Phone:"56789", Rollno:"12348", marks:"80"},{Name:"OOO", Phone:"67890", Rollno:"12349", marks:"75"})
+MongoInvalidArgumentError: Argument "docs" must be an array of documents
+DriveReady> db.students.insertMany([{Name:"MMM", Phone:"87654", Rollno:"12347",marks:"85"},{Name:"NNN", Phone:"56789", Rollno:"12348", marks:"80"},{Name:"OOO", Phone:"67890", Rollno:"12349", marks:"75"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("65129b73dbf63b963123b6b9"),
+    '1': ObjectId("65129b73dbf63b963123b6ba"),
+    '2': ObjectId("65129b73dbf63b963123b6bb")
+  }
+}
+DriveReady> db.students.find()
+[
+  {
+    _id: ObjectId("651298e1dbf63b963123b6b7"),
+    Name: 'SSS',
+    Phone: '12344',
+    Rollno: '12345',
+    marks: '90'
+  },
+  {
+    _id: ObjectId("6512996adbf63b963123b6b8"),
+    Name: 'PPP',
+    Phone: '98765',
+    Rollno: '12346',
+    marks: '90'
+  },
+  {
+    _id: ObjectId("65129b73dbf63b963123b6b9"),
+    Name: 'MMM',
+    Phone: '87654',
+    Rollno: '12347',
+    marks: '85'
+  },
+  {
+    _id: ObjectId("65129b73dbf63b963123b6ba"),
+    Name: 'NNN',
+    Phone: '56789',
+    Rollno: '12348',
+    marks: '80'
+  },
+  {
+    _id: ObjectId("65129b73dbf63b963123b6bb"),
+    Name: 'OOO',
+    Phone: '67890',
+    Rollno: '12349',
+    marks: '75'
+  }
+]
+DriveReady>
+[ncaught:
+  {taxError: Unexpected token, expected "," (1:21)
+    _id: ObjectId("65129b73dbf63b963123b6b9"),
+    Name: 'MMM',s.find(Name:"MMM")
+    Phone: '87654',        ^
+    Rollno: '12347',
+    marks: '85'
+  }
+]
+mongosh> use DriveReady
+switched to db DriveReady
+DriveReady> db.students.find({Name:"MMM"})
+[
+  {
+    _id: ObjectId("65129b73dbf63b963123b6b9"),
+    Name: 'MMM',
+    Phone: '87654',
+    Rollno: '12347',
+    marks: '85'
+  }
+]
+DriveReady> db.students.find({Name:"OOO"},{marks:"90"})
+[ { _id: ObjectId("65129b73dbf63b963123b6bb"), marks: '90' } ]
+DriveReady> db.students.find({marks:"90"})
+[
+  {
+    _id: ObjectId("651298e1dbf63b963123b6b7"),
+    Name: 'SSS',
+    Phone: '12344',
+    Rollno: '12345',
+    marks: '90'
+  },
+  {
+    _id: ObjectId("6512996adbf63b963123b6b8"),
+    Name: 'PPP',
+    Phone: '98765',
+    Rollno: '12346',
+    marks: '90'
+  }
+]
+DriveReady> db.students.find().count()
+5
+DriveReady> db.students.find({marks:"90"}).count()
+2
+DriveReady> db.students.updateOne({Rollno:"12345"},{$set:{Name:"Aditya"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+DriveReady> db.students.find({Rollno:"12345"})
+[
+  {
+    _id: ObjectId("651298e1dbf63b963123b6b7"),
+    Name: 'Aditya',
+    Phone: '12344',
+    Rollno: '12345',
+    marks: '90'
+  }
+]
+DriveReady> db.students.delete({Name:"OOO"})
+TypeError: db.students.delete is not a function
+DriveReady> db.students.deleteOne({Name:"OOO"})
+{ acknowledged: true, deletedCount: 1 }
+DriveReady> db.students.updateOne({Rollno:"12346"},{$set:{College:"Chaitanya"}},{upsert:true})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+DriveReady> db.students.find({Rollno:"12346"})
+[
+  {
+    _id: ObjectId("6512996adbf63b963123b6b8"),
+    Name: 'PPP',
+    Phone: '98765',
+    Rollno: '12346',
+    marks: '90',
+    College: 'Chaitanya'
+  }
+]
+DriveReady> db.students.find({$or:[{marks:{$lt:80}}]})
+
+DriveReady> db.students.find({$or:{marks:{$lt:80}}})
+MongoServerError: $or must be an array
+DriveReady> db.students.find({$or:[{marks:"75"},{marks:"80"}]})
+[
+  {
+    _id: ObjectId("65129b73dbf63b963123b6ba"),
+    Name: 'NNN',
+    Phone: '56789',
+    Rollno: '12348',
+    marks: '80'
+  }
+]
+DriveReady> db.students.find({$and:[{marks:"90"},{Name:"Aditya"}]})
+[
+  {
+    _id: ObjectId("651298e1dbf63b963123b6b7"),
+    Name: 'Aditya',
+    Phone: '12344',
+    Rollno: '12345',
+    marks: '90'
+  }
+]
+DriveReady> db.students.find({or:[{marks:{$lt:85}},{Name:"NNN"}]})
+
+DriveReady> db.students.find({$or:[{marks:{$lt:85}},{Name:"NNN"}]})
+[
+  {
+    _id: ObjectId("65129b73dbf63b963123b6ba"),
+    Name: 'NNN',
+    Phone: '56789',
+    Rollno: '12348',
+    marks: '80'
+  }
+]
+DriveReady> db.students.find().limit(2)
+[
+  {
+    _id: ObjectId("651298e1dbf63b963123b6b7"),
+    Name: 'Aditya',
+    Phone: '12344',
+    Rollno: '12345',
+    marks: '90'
+  },
+  {
+    _id: ObjectId("6512996adbf63b963123b6b8"),
+    Name: 'PPP',
+    Phone: '98765',
+    Rollno: '12346',
+    marks: '90',
+    College: 'Chaitanya'
+  }
+]
+DriveReady> db.student.find().skip(2)
+
+DriveReady> db.students.find().skip(2)
+[
+  {
+    _id: ObjectId("65129b73dbf63b963123b6b9"),
+    Name: 'MMM',
+    Phone: '87654',
+    Rollno: '12347',
+    marks: '85'
+  },
+  {
+    _id: ObjectId("65129b73dbf63b963123b6ba"),
+    Name: 'NNN',
+    Phone: '56789',
+    Rollno: '12348',
+    marks: '80'
+  }
+]
+DriveReady>
+DriveReady> db.students.find({marks:{$gt:"85"}})
+[
+  {
+    _id: ObjectId("651298e1dbf63b963123b6b7"),
+    Name: 'Aditya',
+    Phone: '12344',
+    Rollno: '12345',
+    marks: '90'
+  },
+  {
+    _id: ObjectId("6512996adbf63b963123b6b8"),
+    Name: 'PPP',
+    Phone: '98765',
+    Rollno: '12346',
+    marks: '90',
+    College: 'Chaitanya'
+  }
+]
+DriveReady> db.students.find({marks:{$lt:"85"}})
+[
+  {
+    _id: ObjectId("65129b73dbf63b963123b6ba"),
+    Name: 'NNN',
+    Phone: '56789',
+    Rollno: '12348',
+    marks: '80'
+  }
+]
+DriveReady> db.students.find({marks:{$eq:"80"}})
+[
+  {
+    _id: ObjectId("65129b73dbf63b963123b6ba"),
+    Name: 'NNN',
+    Phone: '56789',
+    Rollno: '12348',
+    marks: '80'
+  }
+]
+DriveReady> db.students.find({marks:{$ne:"90"}})
+[
+  {
+    _id: ObjectId("65129b73dbf63b963123b6b9"),
+    Name: 'MMM',
+    Phone: '87654',
+    Rollno: '12347',
+    marks: '85'
+  },
+  {
+    _id: ObjectId("65129b73dbf63b963123b6ba"),
+    Name: 'NNN',
+    Phone: '56789',
+    Rollno: '12348',
+    marks: '80'
+  }
+]
+DriveReady>
+
+
+
+
+
