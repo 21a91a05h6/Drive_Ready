@@ -1,0 +1,20 @@
+var http=require('http');
+var port=3000;
+var server=http.createServer(function(req,res){
+    res.write("Hello Node");
+    res.end();
+
+})
+server.listen(port,function(error){
+    if(error){
+        console.log("error occured",error);
+    }
+    else{
+        console.log('server is listening on port'+port);
+    }
+})
+
+above code is for making a web server.
+
+in this make a js file in the project we make and then in the file path open cmd and give node [filename.js] and run it, it will send the a response telling that the port is listening.
+in the edge or chrome give 127.0.0.1:port name to see the output on the browser.

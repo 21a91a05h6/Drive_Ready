@@ -1,0 +1,22 @@
+in atlas
+project->new project->name->owner
+
+database->create->cluster->aws->virginia
+
+username, password, ip address
+
+overview->connect->drivers
+
+incase forgot password
+database Access->database users->click edit
+
+incase database not connected
+network access->edit ip address to 0.0.0.0/0
+
+at left
+database->browse collections->add my own data
+
+in link before ?retryWrites give the database name.
+
+
+
