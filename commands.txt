@@ -1,0 +1,26 @@
+making app from scratch
+
+npx create-react-app app_name
+npm init-gives package.json file, entry points, license
+npm i express-gives express module and node modules and pacakge-lock
+npm i nodemon-creates node_modules
+
+in package.json file under scripts do
+"start":"nodemon app.js",
+
+in node to test we use only console format.
+
+express is used as middle ware
+
+to see the output give
+http://localhost:2222/api
+here 2222-port number
+/api-backend
+
+we use different scenarios in app.js by changing backend i.e, by
+changing /api with anything, and also make changes in the app.js
+
+app.use('/api',(req,res,next)=>{
+    res.send("Hello World!");
+})
+here change /api with anything we want

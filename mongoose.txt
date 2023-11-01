@@ -1,0 +1,4 @@
+mongoose is used for connecting the database
+npm i mongoose is used to install mongoose
+mongoose.connect("driver's link from atlas change password")
+the above is used connect to a particular database
